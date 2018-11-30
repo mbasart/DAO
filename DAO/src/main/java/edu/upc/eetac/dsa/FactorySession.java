@@ -19,6 +19,8 @@ public class FactorySession {
 
 
     private static Connection getConnection() {
+
+        //Crear instancia DRIVER!! ponerlo en el pom, buscar en google
         Connection conn = null;
         try {
             conn =

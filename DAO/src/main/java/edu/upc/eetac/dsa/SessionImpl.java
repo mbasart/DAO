@@ -20,6 +20,7 @@ public class SessionImpl implements Session {
     public void save(Object entity) {
 
         String insertQuery = QueryHelper.createQueryINSERT(entity);
+        Log.info(insertQuery); //"INSERT INTO Employee (ID, name, surname, salary) VALUES (?,?,?,?)"
 
         PreparedStatement pstm = null;
 
@@ -27,6 +28,8 @@ public class SessionImpl implements Session {
             pstm = conn.prepareStatement(insertQuery);
             pstm.setObject(1, 0);
             int i = 2;
+
+            //"INSERT INTO Employee (ID, name, surname, salary) VALUES (0,'Juan','lopez',33333333)"
 
             for (String field: ObjectHelper.getFields(entity)) {
                 pstm.setObject(i++, ObjectHelper.getter(entity, field));

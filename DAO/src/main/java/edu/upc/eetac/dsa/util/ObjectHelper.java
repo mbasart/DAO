@@ -29,6 +29,18 @@ public class ObjectHelper {
     public static Object getter(Object object, String property) {
         // Method // invoke
 
-        return null;
+        Class theClass = object.getClass();
+        object."get"+property()   // object.getName();  property = "name"
+
+        sMethod = "getName";  //"get"+property.substring(0,1).toUpperCase()+property.substring(1);
+
+        Method method = theClass.getMethod(sMethod, null)  ;
+
+        //Method[] methodList = theClass.getMethods();
+
+        Object ret = method.invoke(object, null);
+
+
+        return ret;
     }
 }
