@@ -23,6 +23,10 @@ public class ObjectHelper {
     public static void setter(Object object, String property, Object value) {
         // Method // invoke
 
+        Class theClass = object.getClass();
+
+        Method method = theClass.getMethod(property,String.class);
+        Object ret = method.invoke(object, value);
 
     }
 

@@ -14,6 +14,7 @@ public class SessionImpl implements Session {
     private final Connection conn;
 
     public SessionImpl(Connection conn) {
+
         this.conn = conn;
     }
 
@@ -48,6 +49,7 @@ public class SessionImpl implements Session {
     }
 
     public Object get(Class theClass, int ID) {
+
         return null;
     }
 
@@ -60,14 +62,17 @@ public class SessionImpl implements Session {
     }
 
     public List<Object> findAll(Class theClass) {
+
         return null;
     }
 
     public List<Object> findAll(Class theClass, HashMap params) {
+
         return null;
     }
 
     public List<Object> query(String query, Class theClass, HashMap params) {
+
         return null;
     }
 }

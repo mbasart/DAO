@@ -18,6 +18,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
         }
         catch (Exception e) {
             // LOG
+            log.error("Error al afegir un nou employee");
         }
         finally {
             session.close();
@@ -36,6 +37,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
         }
         catch (Exception e) {
             // LOG
+            log.error("Error al obtenir un employee");
         }
         finally {
             session.close();
@@ -58,6 +60,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
         }
         catch (Exception e) {
             // LOG
+            log.error("Error al actualitzar un employee");
         }
         finally {
             session.close();
@@ -74,6 +77,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
         }
         catch (Exception e) {
             // LOG
+            log.error("Error al borrar un employee");
         }
         finally {
             session.close();
@@ -91,6 +95,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
         }
         catch (Exception e) {
             // LOG
+            log.error("Error al obtenir la llista de employee");
         }
         finally {
             session.close();
@@ -113,6 +118,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
         }
         catch (Exception e) {
             // LOG
+            log.error("Error al obtenir llista employee by dept");
         }
         finally {
             session.close();
